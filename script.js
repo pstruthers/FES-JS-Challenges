@@ -1,5 +1,5 @@
-function calcPerimeter(length, width) {
-    return length * 2 + width * 2
+function calcTriangleArea(base, height) {
+    return base * height / 2
 }
 
-console.log(calcPerimeter(2, 9))
+console.log(calcTriangleArea(20, 20))
