@@ -1,5 +1,5 @@
-function oppositeBoolean(bool) {
-    return !bool
+function isNotZero(element) {
+    return element !== 0
 }
 
-console.log(oppositeBoolean(false))
+console.log(isNotZero(null))
