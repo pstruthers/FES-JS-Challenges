@@ -1,5 +1,5 @@
-function appendFrontend(str) {
-    return str + 'Frontend'
+function sumGreaterThan100(num1, num2) {
+    return num1 + num2 > 100
 }
 
-console.log(appendFrontend('Orange'))
+console.log(sumGreaterThan100(100, -50))
