@@ -1,7 +1,7 @@
-function arrLength(arr) {
-    return arr.length
+function lastElem(arr) {
+    return arr[arr.length - 1]
 }
 
-console.log(arrLength([1, 2, 3]))
-console.log(arrLength([5, 0, -4, 1]))
-console.log(arrLength([]))
+console.log(lastElem([3, 2, 0, 6, 2]))
+console.log(lastElem(['dog', 'cat', 'ball']))
+console.log(lastElem([null, 5, false]))
