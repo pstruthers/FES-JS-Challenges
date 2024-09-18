@@ -1,28 +1,23 @@
-// Using an incrementing for loop
-function reverseString(string) {
-    let stringReverse = ''
-    for (let i = 0; i < string.length; i++) {
-        stringReverse = string[i] + stringReverse
+// Using a for loop
+function convertToZeros(arr) {
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = 0
     }
-    return stringReverse
+    return arr
 }
 
-// Using a decrementing for loop
-function reverseString(string) {
-    let stringReverse = ''
-    for (let i = string.length - 1; i >= 0; i--) {
-        stringReverse += string[i]
-    }
-    return stringReverse
+// Using array fill
+function convertToZeros(arr) {
+    return new Array(arr.length).fill(0)
 }
 
-// Using array reverse property
-function reverseString(string) {
-    return string.split('').reverse().join('') // Convert string to array, reverse array, and convert back to string
+// Using array map
+function convertToZeros(arr) {
+    return arr.map(element => 0)
 }
 
 
 
-console.log(reverseString('abc')) // -> cba
-console.log(reverseString('Paige')) // -> egiaP
-console.log(reverseString('This is cool')) // -> looc si sihT
+console.log(convertToZeros([5, 100, 0])) // -> [0, 0, 0]
+console.log(convertToZeros([12])) // -> [0]
+console.log(convertToZeros([1, 2, 3, 4, 5])) // -> [0, 0, 0, 0, 0]
