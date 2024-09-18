@@ -1,7 +1,11 @@
-function lastElem(arr) {
-    return arr[arr.length - 1]
+function arrSum(arr) {
+    let sum = 0
+    for (let i = 0; i < arr.length; i++) {
+         sum += arr[i]
+    }
+    return sum
 }
 
-console.log(lastElem([3, 2, 0, 6, 2]))
-console.log(lastElem(['dog', 'cat', 'ball']))
-console.log(lastElem([null, 5, false]))
+console.log(arrSum([2, 2, 2]))
+console.log(arrSum([100, 200, 500]))
+console.log(arrSum([0, -5, -10]))
