@@ -1,8 +1,8 @@
 // Using a for loop
-function removeApples(arr) {
+function filterOutFalsy(arr) {
     let newArr = []
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] !== 'Apple') {
+        if (arr[i]) {
             newArr.push(arr[i])
         }
     }
@@ -10,12 +10,11 @@ function removeApples(arr) {
 }
 
 // Using array filter
-function removeApples(arr) {
-    return arr.filter(element => element !== 'Apple')
+function filterOutFalsy(arr) {
+    return arr.filter(element => element)
 }
 
 
 
-console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple'])) // -> [Banana, Orange]
-console.log(removeApples(['Tomato', 'Orange', 'Banana'])) // -> [Tomato, Orange, Banana]
-console.log(removeApples(['Banana', 'Orange', 'Apple'])) // -> [Banana, Orange]
+console.log(filterOutFalsy(["", [], 0, null, undefined, "0"])) // -> [[], "0"]
+console.log(filterOutFalsy(['Tomato', 'Orange', 'Banana', false])) // -> [Tomato, Orange, Banana]
