@@ -1,23 +1,21 @@
 // Using a for loop
-function convertToZeros(arr) {
+function removeApples(arr) {
+    let newArr = []
     for (let i = 0; i < arr.length; i++) {
-        arr[i] = 0
+        if (arr[i] !== 'Apple') {
+            newArr.push(arr[i])
+        }
     }
-    return arr
+    return newArr
 }
 
-// Using array fill
-function convertToZeros(arr) {
-    return new Array(arr.length).fill(0)
-}
-
-// Using array map
-function convertToZeros(arr) {
-    return arr.map(element => 0)
+// Using array filter
+function removeApples(arr) {
+    return arr.filter(element => element !== 'Apple')
 }
 
 
 
-console.log(convertToZeros([5, 100, 0])) // -> [0, 0, 0]
-console.log(convertToZeros([12])) // -> [0]
-console.log(convertToZeros([1, 2, 3, 4, 5])) // -> [0, 0, 0, 0, 0]
+console.log(removeApples(['Banana', 'Apple', 'Orange', 'Apple'])) // -> [Banana, Orange]
+console.log(removeApples(['Tomato', 'Orange', 'Banana'])) // -> [Tomato, Orange, Banana]
+console.log(removeApples(['Banana', 'Orange', 'Apple'])) // -> [Banana, Orange]
