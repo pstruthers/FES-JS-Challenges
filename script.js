@@ -1,15 +1,13 @@
-function calcTime(seconds) {
-    let minutes = Math.floor(seconds / 60)
-    let secondsRemainder = seconds % 60
-    if (minutes < 10) {
-        minutes = '0' + minutes
+function getMax(arr) {
+    let max = arr[0]
+    for (let i = 1; i < arr.length; i++) {
+        if (arr[i] > max) {
+            max = arr[i]
+        }
     }
-    if (secondsRemainder < 10) {
-        secondsRemainder = '0' + secondsRemainder
-    }
-    return minutes + ':' + secondsRemainder
+    return max
 }
 
-console.log(calcTime(66)) // -> 01:06
-console.log(calcTime(50)) // -> 00:50
-console.log(calcTime(300)) // -> 05:00
+console.log(getMax([5, 100, 0])) // -> 100
+console.log(getMax([12, 10, -20])) // -> 12
+console.log(getMax([-300, -100, -200])) // -> -100
