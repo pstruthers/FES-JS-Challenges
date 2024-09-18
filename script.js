@@ -1,5 +1,6 @@
-function isLoggedInAndSubscribed(str1, str2) {
-    return str1 === 'LOGGED_IN' || str2 === 'SUBSCRIBED'
+function falsyOrTruthy(val1, val2) {
+    return !val1 ? val1 : val2
 }
 
-console.log(isLoggedInAndSubscribed('LOGGED_OUT', 'SUBSCRIBED'))
+console.log(falsyOrTruthy(550, 500))
+console.log(falsyOrTruthy(false, 100))
