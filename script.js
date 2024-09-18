@@ -1,6 +1,7 @@
-function falsyOrTruthy(val1, val2) {
-    return !val1 ? val1 : val2
+function arrLength(arr) {
+    return arr.length
 }
 
-console.log(falsyOrTruthy(550, 500))
-console.log(falsyOrTruthy(false, 100))
+console.log(arrLength([1, 2, 3]))
+console.log(arrLength([5, 0, -4, 1]))
+console.log(arrLength([]))
