@@ -1,8 +1,8 @@
-async function postsByUser(userId) {
-    const response = await fetch("https://jsonplaceholder.typicode.com/posts")
-    const data = await response.json()
-    const posts = data.filter(element => element.userId === userId)
-    console.log(posts)
+async function firstSixIncomplete() {
+  const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+  const data = await response.json();
+  const incompleteTodos = data.filter(element => !element.completed).slice(0, 6);
+  console.log(incompleteTodos);
 }
 
-postsByUser(4)
+firstSixIncomplete();
