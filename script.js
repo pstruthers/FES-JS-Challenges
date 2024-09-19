@@ -1,16 +1,22 @@
-// Using a for loop
-function convertToBoolean(arr) {
-    let newArr = []
-    for (let i = 0; i < arr.length; i++) {
-        newArr.push(!!arr[i])
+
+function showRating(rating) {
+    let string = ''
+    for (let i = 1; i <= Math.floor(rating); i++) {
+        string += "*"
+        if (i !== Math.floor(rating)) {
+            string += ' '
+        }
     }
-    return newArr
+    if (rating === 0.5) {
+        string += '.'
+    }
+    else if (!Number.isInteger(rating)) {
+        string += ' .'
+    }
+    return string
 }
 
-// Using array map
-function convertToBoolean(arr) {
-    return arr.map(element => !!element)
-}
 
-
-console.log(convertToBoolean([500, 0, "Paige", "", []])) // -> [true, false, true, false, true]
+console.log(showRating(3)) // -> * * *
+console.log(showRating(4.5)) // -> * * * * .
+console.log(showRating(0.5)) // -> .
